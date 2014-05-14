@@ -41,18 +41,25 @@ $('.button-six').click(function () {
 // syntax to get it working.
 
 function showHeight( element, height ) {
-  $('.example-Number7').text("The height for the " + element + " is " + height + "px.");
+	$('.example-Number7').text('The height for the ' + element + ' is ' + height + 'px.');
 }
 $('.button-seven').click(function() {
-  showHeight( "example-Container", $( ".example-Container" ).height() );
+	showHeight( 'example-Container', $( '.example-Container' ).height() );
 });
 
-$('.button-eight').one( "click", function() {
-  $('.example-Number8').height( 235 ).css({
-    cursor: "auto",
-    backgroundColor: "#236192",
-  });
-  $('.example-Number8').text('GO SOUNDERS!');
+$('.button-eight').one( 'click', function() {
+	$('.example-Number8').height( 235 ).css({
+			cursor:'auto',
+			backgroundColor:'#236192',
+		});
+	$('.example-Number8').text('GO SOUNDERS!');
+});
+
+function showWidth( element, width ) {
+	$('.example-Number9').text('The width of the ' + element + ' is ' + width + 'px.');
+}
+$('.button-nine').click(function() {
+	showWidth( 'example-Container', $( '.example-Container' ).width() );
 });
 
 // $('.button-nine').click(function () {
@@ -82,3 +89,21 @@ $('.button-eight').one( "click", function() {
 // $('.button-fifteen').click(function () {
 // 	$('.example-Number15').slideToggle( 'slow' );
 // });
+
+jQuery(document).ready(function() {
+                var offset = 200;
+                var duration = 500;
+                jQuery(window).scroll(function() {
+                    if (jQuery(this).scrollTop() > offset) {
+                        jQuery('.scroll-to-top').fadeIn(duration);
+                    } else {
+                        jQuery('.scroll-to-top').fadeOut(duration);
+                    }
+                });
+                
+                jQuery('.scroll-to-top').click(function(event) {
+                    event.preventDefault();
+                    jQuery('html, body').animate({scrollTop: 0}, duration);
+                    return false;
+                });
+            });

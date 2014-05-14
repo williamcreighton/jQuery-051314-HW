@@ -524,31 +524,36 @@ body {
 }
 
 h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-        color: white;
-        text-align: center;
-        line-height: 432px;
-    }
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: white;
+    text-align: center;
+    line-height: 432px;
+}
 
 h2 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-        color: white;
-        text-align: center;
-        line-height: 432px;
-    }    
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: white;
+    text-align: center;
+    line-height: 432px;
+}
+
+a {
+    text-decoration: none;
+    color: #57ff24;
+}  
 
 .text {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-        color: white;
-        text-align: center;
-        line-height: 432px;
-    }      
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: white;
+    text-align: center;
+    line-height: 432px;
+}      
 
 p {
     margin: 0 auto;
@@ -567,7 +572,25 @@ p {
     height: 75px;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 1em;
+    right: 0px;
+    background: url(images/scroll-to-top.png) no-repeat;
+    width:55px;
+    height: 55px;
+    padding-right: 1em;
+    display: none;
+    z-index: 999;
+}
 
+.scroll-to-top:hover {
+    cursor: pointer;
+    color: #57ff24;
+}
+
+// scroll-to-top code borrowed from 
+// http://mark-anthony.ca/adding-a-jquery-scroll-to-top-button-to-a-webpage/        
 
 .footer {
     clear: both;
