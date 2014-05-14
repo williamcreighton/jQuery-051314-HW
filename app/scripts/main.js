@@ -40,14 +40,20 @@ $('.button-six').click(function () {
 // am seeing use of 'clearIt' or 'each' but can't figure out the 
 // syntax to get it working.
 
-
-$('.button-seven').click(function () {
-	$('.example-Number7').slideToggle( 'slow' );
+function showHeight( element, height ) {
+  $('.example-Number7').text("The height for the " + element + " is " + height + "px.");
+}
+$('.button-seven').click(function() {
+  showHeight( "example-Container", $( ".example-Container" ).height() );
 });
 
-// $('.button-eight').click(function () {
-// 	$('.example-Number8').slideToggle( 'slow' );
-// });
+$('.button-eight').one( "click", function() {
+  $('.example-Number8').height( 235 ).css({
+    cursor: "auto",
+    backgroundColor: "#236192",
+  });
+  $('.example-Number8').text('GO SOUNDERS!');
+});
 
 // $('.button-nine').click(function () {
 // 	$('.example-Number9').slideToggle( 'slow' );
