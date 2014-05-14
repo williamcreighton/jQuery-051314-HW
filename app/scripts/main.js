@@ -90,6 +90,8 @@ $('.button-nine').click(function() {
 // 	$('.example-Number15').slideToggle( 'slow' );
 // });
 
+// <!--jQuery Scroll-->
+
 jQuery(document).ready(function() {
                 var offset = 200;
                 var duration = 500;
@@ -107,3 +109,8 @@ jQuery(document).ready(function() {
                     return false;
                 });
             });
+
+// <!--jQuery Scroll Ends-->
+
+// No, I didn't build it ... but I do think I have pieced together the bits
+// and have an understanding of how it works.
